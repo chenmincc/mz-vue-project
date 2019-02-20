@@ -50,6 +50,8 @@
     border-bottom: 1px solid #ededed;
     justify-content: space-around;
     align-items: center;
+    font-size: 15px;
+    color: #191a1b;
   }
 }
 </style>

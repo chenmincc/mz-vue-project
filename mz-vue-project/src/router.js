@@ -90,27 +90,15 @@ let router = new VueRouter({
     },
     {
       path: '/card',
-      component: {
-        render (h) {
-          return h('div', '卖座卡的页面');
-        }
-      }
+      component: () => import('./views/Card.vue')
     },
     {
       path: '/money',
-      component: {
-        render (h) {
-          return h('div', '钱的页面');
-        }
-      }
+      component: () => import('./views/Money.vue')
     },
     {
       path: '/set',
-      component: {
-        render (h) {
-          return h('div', '设置的页面');
-        }
-      }
+      component: () => import('./views/Set.vue')
     },
     // 设置一个 通配符的 一级路由，当url地址无法与上面的规则匹配的时候，就会跟我匹配。
     {

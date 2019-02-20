@@ -56,6 +56,11 @@ export default {
     text-align: left;
     padding-right: 15px;
     float: left;
+    font-size: 15px;
+    color: #191a1b;
+    p {
+      line-height: 22px;
+    }
     span {
       display: block;
       color: #797d82;
@@ -74,6 +79,7 @@ export default {
     span {
       color: #ff5f16;
       font-size: 15px;
+      line-height: 22px;
     }
     p {
       color: #797d82;
