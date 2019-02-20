@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style lang="less">
+body{
+  background: #fff;
+}
   .topLogin{
     margin: 79px auto 40px;
     text-align: center;

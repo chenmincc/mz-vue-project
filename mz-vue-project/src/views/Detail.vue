@@ -32,29 +32,29 @@
       <div class="actor-list">
         <ul>
           <li>
-            <img src="../assets/images/yy.jpg" alt>
+            <img src="../assets/images/dy.jpg" alt>
             <span class="actors-name">郭帆</span>
             <span class="actors-role">导演</span>
           </li>
           <li>
             <img src="../assets/images/yy.jpg" alt>
-            <span class="actors-name">郭帆</span>
-            <span class="actors-role">导演</span>
+            <span class="actors-name">屈楚萧</span>
+            <span class="actors-role">刘启</span>
           </li>
           <li>
-            <img src="../assets/images/yy.jpg" alt>
-            <span class="actors-name">郭帆</span>
-            <span class="actors-role">导演</span>
+            <img src="../assets/images/yy1.jpg" alt>
+            <span class="actors-name">赵今麦</span>
+            <span class="actors-role">韩朵朵</span>
           </li>
           <li>
-            <img src="../assets/images/yy.jpg" alt>
-            <span class="actors-name">郭帆</span>
-            <span class="actors-role">导演</span>
+            <img src="../assets/images/yy3.jpg" alt>
+            <span class="actors-name">李光洁</span>
+            <span class="actors-role">王磊</span>
           </li>
           <li>
-            <img src="../assets/images/yy.jpg" alt>
-            <span class="actors-name">郭帆</span>
-            <span class="actors-role">导演</span>
+            <img src="../assets/images/yy1.jpg" alt>
+            <span class="actors-name">赵今麦</span>
+            <span class="actors-role">韩朵朵</span>
           </li>
         </ul>
       </div>
@@ -110,22 +110,24 @@ export default {
         alert(res.msg);
       }
       console.log(res);
-      console.log(this.detailList);
+      // console.log(this.detailList);
     })
   }
 }
 </script>
 
 <style lang="less">
-body {
-  background: #f4f4f4;
-}
 .details {
+  background: #f4f4f4;
   overflow-x: hidden;
-  .detailBanner img {
+  .detailBanner {
+    img {
     width: 100%;
     height: 56vw;
+    // transform: translateY(-50%);
   }
+  }
+
   .film-detail {
     padding: 15px;
     padding-top: 12px;

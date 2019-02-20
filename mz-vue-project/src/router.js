@@ -26,6 +26,12 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 let router = new VueRouter({
+  scrollBehavior (to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    }
+  },
   routes: [
     {
       path: '/',
