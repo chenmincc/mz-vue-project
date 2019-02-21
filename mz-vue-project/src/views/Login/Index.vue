@@ -45,10 +45,14 @@ export default {
           sessionStorage.setItem('nickname', res.data.nickName);
           // 跳转页面 - 这里是固定的跳转
           // this.$router.push('/card');
-          // 跳转到用户具体想去的页面
-          this.$router.replace({
-            path: this.$route.query.redirect
-          })
+          if (this.$route.fullPath === '/login') {
+            this.$router.push('/film/nowPlaying');
+          } else {
+            // 跳转到用户具体想去的页面
+            this.$router.replace({
+              path: this.$route.query.redirect
+            })
+          }
         } else {
           alert(res.msg);
         }

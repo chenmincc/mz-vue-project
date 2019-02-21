@@ -56,6 +56,8 @@
 import MzHeader from '@/components/MzHeader/Index.vue';
 import axios from 'axios';
 
+import { mapState, mapGetters } from 'vuex';
+
 export default {
   components: {
     MzHeader
@@ -65,60 +67,21 @@ export default {
     return {
       // curCityName: '深圳', // 自身不要，而是用仓库中的curCityName
       // 城市数据列表
-      cityData: []
+      // cityData: []
     }
   },
 
-  // 处理之后的城市数据
   computed: {
-    filterCityData () {
-      let hash = {};
-      let i = 0;
-      let res = [];
-
-      this.cityData.forEach(item => {
-        // 1、得到当前城市的首字母
-        let firstLetter = item.pinyin.substr(0, 1).toUpperCase();
-        // console.log(firstLetter);
-        // 2. 判断当前城市的 首字母是循环过程中第一次出现，还是多次出现。
-        if (hash[firstLetter]) {
-          // 存在
-          let index = hash[firstLetter] - 1;
-          res[index].list.push(item)
-        } else {
-          // 不存在
-          hash[firstLetter] = ++i;
-          let obj = {};
-          obj.py = firstLetter;
-          obj.list = [item];
-          res.push(obj)
-        }
-      })
-
-      let temp = res.sort((a, b) => {
-        return a.py.charCodeAt() - b.py.charCodeAt();
-      })
-
-      return temp;
-    },
-
-    // 右侧显示字母的数据
-    filterLetters () {
-      return this.filterCityData.map(item => {
-        return item.py;
-      })
-    },
-
-    hotCity () {
-      var tem = this.cityData.filter(item => {
-        return item.isHot === 1
-      })
-      return tem
-    },
-
-    curCityName () {
-      return this.$store.state.curCityName
-    }
+    // ...对象展开运算符
+    ...mapState([
+      'cityData',
+      'curCityName'
+    ]),
+    ...mapGetters([
+      'filterCityData',
+      'filterLetters',
+      'hotCity'
+    ])
   },
 
   // 获取城市列表数据
@@ -128,7 +91,8 @@ export default {
         let res = response.data;
         console.log(res);
         if (res.status === 0) {
-          this.cityData = res.data.cities;
+          // this.cityData = res.data.cities;
+          this.$store.commit('chgCityData', res.data.cities)
           // console.log(res.data.cities)
         } else {
           alert(res.msg)
@@ -156,6 +120,7 @@ export default {
       this.$store.commit('chgCityName', {
         name: city.name
       })
+      this.$router.push('/film/nowPlaying')
     }
   },
 
