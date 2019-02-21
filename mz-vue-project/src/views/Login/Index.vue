@@ -2,13 +2,13 @@
   <div>
     <div class="topLogin">
       <h1>
-        <img src="../assets/images/logo.png" alt>
+        <img src="@/assets/images/logo.png" alt>
       </h1>
     </div>
     <div class="form">
       <form action>
         <div class="form-group">
-          <input type="tel" maxlength="13" placeholder="手机号" v-model="username" class="tel">
+          <input type="text" maxlength="13" placeholder="用户名" v-model="username" class="tel">
           <!-- <span class="yzm">获取验证码</span> -->
         </div>
         <div class="form-group">

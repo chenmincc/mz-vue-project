@@ -32,27 +32,27 @@
       <div class="actor-list">
         <ul>
           <li>
-            <img src="../assets/images/dy.jpg" alt>
+            <img src="@/assets/images/dy.jpg" alt>
             <span class="actors-name">郭帆</span>
             <span class="actors-role">导演</span>
           </li>
           <li>
-            <img src="../assets/images/yy.jpg" alt>
+            <img src="@/assets/images/yy.jpg" alt>
             <span class="actors-name">屈楚萧</span>
             <span class="actors-role">刘启</span>
           </li>
           <li>
-            <img src="../assets/images/yy1.jpg" alt>
+            <img src="@/assets/images/yy1.jpg" alt>
             <span class="actors-name">赵今麦</span>
             <span class="actors-role">韩朵朵</span>
           </li>
           <li>
-            <img src="../assets/images/yy3.jpg" alt>
+            <img src="@/assets/images/yy3.jpg" alt>
             <span class="actors-name">李光洁</span>
             <span class="actors-role">王磊</span>
           </li>
           <li>
-            <img src="../assets/images/yy1.jpg" alt>
+            <img src="@/assets/images/yy1.jpg" alt>
             <span class="actors-name">赵今麦</span>
             <span class="actors-role">韩朵朵</span>
           </li>
@@ -69,16 +69,16 @@
       <div class="photos-list">
         <ul>
           <li>
-            <img src="../assets/images/jz1.jpg" alt>
+            <img src="@/assets/images/jz1.jpg" alt>
           </li>
           <li>
-            <img src="../assets/images/jz2.jpg" alt>
+            <img src="@/assets/images/jz2.jpg" alt>
           </li>
           <li>
-            <img src="../assets/images/jz1.jpg" alt>
+            <img src="@/assets/images/jz1.jpg" alt>
           </li>
           <li>
-            <img src="../assets/images/jz2.jpg" alt>
+            <img src="@/assets/images/jz2.jpg" alt>
           </li>
         </ul>
       </div>

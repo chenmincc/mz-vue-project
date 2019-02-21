@@ -1,12 +1,12 @@
 <template>
   <div class="cinema">
     <div class="top">
-      <span>
-        深圳
+      <router-link tag="span" to="/city">
+        {{ curCityName }}
         <i class="iconfont icon-xiangxia" style="font-size:10px"></i>
-      </span>
+      </router-link>
       <p>影院</p>
-      <img src="../../assets/images/fdj.png" alt="">
+      <img src="@/assets/images/fdj.png" alt="">
     </div>
     <div class="nav1">
       <div>
@@ -21,8 +21,23 @@
   </div>
 </template>
 
+<script>
+export default {
+  computed: {
+    curCityName () {
+      return this.$store.state.curCityName
+    }
+  }
+}
+</script>
+
 <style lang="less">
 .cinema {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: #fff;
   .top {
     display: flex;
     box-sizing: border-box;

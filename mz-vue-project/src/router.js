@@ -35,22 +35,22 @@ let router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: () => import('./views/Home.vue'),
+      component: () => import('./views/Home/Index.vue'),
       // PS: 不是一级路由的话，path路径前面不要加 /
       // PS: 二级或二级以上的路由，他们的url地址，是会从一级路由开始一直做追加的。
       // localhost:8080/#/films
       children: [
         {
           path: 'films',
-          component: () => import('./views/Film.vue'),
+          component: () => import('./views/Home/Film/Index.vue'),
           children: [
             {
               path: 'nowPlaying',
-              component: () => import('./views/Tabs1.vue')
+              component: () => import('./views/Home/Film/Tabs/Tabs1.vue')
             },
             {
               path: 'comingSoon',
-              component: () => import('./views/Tabs2.vue')
+              component: () => import('./views/Home/Film/Tabs/Tabs2.vue')
             },
             {
               path: '',
@@ -60,11 +60,11 @@ let router = new VueRouter({
         },
         {
           path: 'cinemas',
-          component: () => import('./views/Cinema.vue')
+          component: () => import('./views/Home/Cinema/Index.vue')
         },
         {
           path: 'center',
-          component: () => import('./views/Center.vue')
+          component: () => import('./views/Home/Center/Index.vue')
         },
         // 空的儿子
         // localhost:8080/#/  ->  localhost:8080/#/films
@@ -76,29 +76,29 @@ let router = new VueRouter({
     },
     {
       path: '/city',
-      component: () => import('./views/City.vue')
+      component: () => import('./views/City/Index.vue')
     },
     {
       // 详情页
       path: '/detail/:id',
       name: 'detail',
-      component: () => import('./views/Detail.vue')
+      component: () => import('./views/Detail/Index.vue')
     },
     {
       path: '/login',
-      component: () => import('./views/Login.vue')
+      component: () => import('./views/Login/Index.vue')
     },
     {
       path: '/card',
-      component: () => import('./views/Card.vue')
+      component: () => import('./views/Card/Index.vue')
     },
     {
       path: '/money',
-      component: () => import('./views/Money.vue')
+      component: () => import('./views/Money/Index.vue')
     },
     {
       path: '/set',
-      component: () => import('./views/Set.vue')
+      component: () => import('./views/Setting/Index.vue')
     },
     // 设置一个 通配符的 一级路由，当url地址无法与上面的规则匹配的时候，就会跟我匹配。
     {

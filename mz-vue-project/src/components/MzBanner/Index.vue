@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="swiper-container mz-banner">
-      <router-link to="/city" tag="div" class="city-fixed">
+      <!-- <router-link to="/city" tag="div" class="city-fixed">
         <span>深圳</span>&nbsp;
         <i class="iconfont icon-xiangxia" style="font-size:10px"></i>
-      </router-link>
+      </router-link> -->
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item in bannerList" :key="item._id">
           <img :src="item.imgUrl" alt="">
@@ -71,26 +71,6 @@ export default {
 <style lang="less">
 .mz-banner {
   height: 56vm;
-  .city-fixed {
-    position: absolute;
-    top: 18px;
-    left: 7px;
-    color: rgb(194, 194, 194);
-    z-index: 10;
-    font-size: 13px;
-    background: rgba(0,0,0,.2);
-    height: 30px;
-    line-height: 30px;
-    border-radius: 15px;
-    text-align: center;
-    padding: 0 5px;
-    .x{
-      display: block;
-      width: 10px;
-      height: 10px;
-      color: #fff;
-    }
-  }
   img {
     width: 100%;
     height: 100%;

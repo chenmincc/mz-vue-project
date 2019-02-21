@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import MzCinemaTop from '../components/MzCinemaTop/Index.vue';
+import MzCinemaTop from '@/components/MzCinemaTop/Index.vue';
 import axios from 'axios';
 
 export default {
@@ -47,6 +47,11 @@ export default {
 </script>
 
 <style lang="less">
+.MzFilmAdress{
+  // flex: 1;
+  // overflow-y: auto;
+  padding-top: 94px;
+}
 .MzFilmAdress-item {
   height: 45px;
   padding: 15px;

@@ -2,38 +2,38 @@
   <div class="main">
     <div class="center-view">
       <router-link to='/login' tag='div' class='top'>
-        <img src="../assets/images/ljdl.png" alt class="top-img">
+        <img src="@/assets/images/ljdl.png" alt class="top-img">
         <p>立即登录</p>
       </router-link>
       <ul class="order">
         <li>
-          <img src="../assets/images/dydd.png" alt class="order-img">
+          <img src="@/assets/images/dydd.png" alt class="order-img">
           <!-- <span class="span"></span> -->
           <p class="dd">电影订单</p>
         </li>
         <li>
-          <img src="../assets/images/ptdd.png" alt class="order-img">
+          <img src="@/assets/images/ptdd.png" alt class="order-img">
           <p class="dd">拼团订单</p>
         </li>
       </ul>
       <router-link to='/card' tag='div' class='card'>
-        <img src="../assets/images/mzk.png" alt class="card-img1">
+        <img src="@/assets/images/mzk.png" alt class="card-img1">
         <span class="card-mzk">卖座卡</span>
-        <img src="../assets/images/left.png" alt class="card-img2">
+        <img src="@/assets/images/left.png" alt class="card-img2">
       </router-link>
       <router-link to='/money' tag='div' class='card'>
-        <img src="../assets/images/ye.png" alt class="card-img1">
+        <img src="@/assets/images/ye.png" alt class="card-img1">
         <span class="card-mzk">余额</span>
         <div class="price">
           <i>￥</i>
           <span>0</span>
         </div>
-        <img src="../assets/images/left.png" alt class="card-img2">
+        <img src="@/assets/images/left.png" alt class="card-img2">
       </router-link>
       <router-link to='/set' tag='div' class='card'>
-        <img src="../assets/images/sz.png" alt class="card-img1">
+        <img src="@/assets/images/sz.png" alt class="card-img1">
         <span class="card-mzk">设置</span>
-        <img src="../assets/images/left.png" alt class="card-img2">
+        <img src="@/assets/images/left.png" alt class="card-img2">
       </router-link>
     </div>
   </div>
@@ -56,7 +56,7 @@
         height: 200px;
         padding-left: 22px;
         padding-top: 64px;
-        background: url(../assets/images/wd-background.png);
+        background: url(../../../assets/images/wd-background.png);
         background-size: cover;
         display: flex;
         align-items: center;
