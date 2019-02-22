@@ -120,7 +120,7 @@ export default {
       this.$store.commit('chgCityName', {
         name: city.name
       })
-      this.$router.push('/film/nowPlaying')
+      // this.$router.push('/film/nowPlaying')
     }
   },
 

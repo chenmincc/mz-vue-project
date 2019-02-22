@@ -2,6 +2,9 @@
   <div class="details">
     <!-- 详情页 id是 {{ $route.params.id }} -->
     <div class="detailBanner">
+      <div class="goBack" @click="back">
+        <img src="@/assets/images/xiangzuo.png" alt="">
+      </div>
       <img :src="detailList.dataImg" alt>
     </div>
     <div class="film-detail">
@@ -98,6 +101,13 @@ export default {
       detailList: []
     }
   },
+
+  methods: {
+    back () {
+      this.$router.push('/film/nowPlaying')
+    }
+  },
+
   created () {
     axios.post('http://localhost:3000/films/update1', {
       id: this.$route.params.id
@@ -125,7 +135,17 @@ export default {
     width: 100%;
     height: 56vw;
     // transform: translateY(-50%);
-  }
+    }
+    .goBack{
+      height: 30px;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
 
   .film-detail {

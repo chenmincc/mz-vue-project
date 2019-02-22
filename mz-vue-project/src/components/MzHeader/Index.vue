@@ -1,6 +1,7 @@
 <template>
   <header class="mz-header">
     <div class="title">
+      <span @click="back">×</span>
       <div>{{ title }}</div>
     </div>
   </header>
@@ -13,6 +14,12 @@ export default {
     title: {
       type: String,
       default: '卖座电影'
+    }
+  },
+
+  methods: {
+    back () {
+      this.$router.push('/film/nowPlaying')
     }
   }
 }
@@ -39,6 +46,12 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    padding-left: 16px;
+    padding-right: 16px;
+    span{
+      float: left;
+      font-size: 20px;
+    }
   }
 }
 </style>
