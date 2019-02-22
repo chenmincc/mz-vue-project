@@ -55,7 +55,7 @@ export default {
   created () {
     axios.get('http://localhost:3000/films/search', {
       params: {
-        pageSize: 12
+        pageSize: 20
       }
     }).then((res) => {
       let data = res.data;
@@ -73,6 +73,7 @@ export default {
 .main {
   flex: 1;
   overflow: auto;
+  padding-bottom: 50px;
   .main-ul {
     margin-left: 15px;
     margin-bottom: 0;

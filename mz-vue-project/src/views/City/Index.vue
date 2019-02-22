@@ -54,9 +54,9 @@
 
 <script>
 import MzHeader from '@/components/MzHeader/Index.vue';
-import axios from 'axios';
+// import axios from 'axios';
 
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions, mapMutations } from 'vuex';
 
 export default {
   components: {
@@ -86,19 +86,27 @@ export default {
 
   // 获取城市列表数据
   methods: {
-    getCityData () {
-      axios.get('./json/city.json').then((response) => {
-        let res = response.data;
-        console.log(res);
-        if (res.status === 0) {
-          // this.cityData = res.data.cities;
-          this.$store.commit('chgCityData', res.data.cities)
-          // console.log(res.data.cities)
-        } else {
-          alert(res.msg)
-        }
-      })
-    },
+    ...mapMutations([
+      'chgCityName',
+      'chgCityData'
+    ]),
+
+    ...mapActions([
+      'getCityData'
+    ]),
+    // getCityData () {
+    //   axios.get('./json/city.json').then((response) => {
+    //     let res = response.data;
+    //     console.log(res);
+    //     if (res.status === 0) {
+    //       // this.cityData = res.data.cities;
+    //       this.$store.commit('chgCityData', res.data.cities)
+    //       // console.log(res.data.cities)
+    //     } else {
+    //       alert(res.msg)
+    //     }
+    //   })
+    // },
 
     /**
     * 右侧拼音首字母点击
@@ -117,7 +125,11 @@ export default {
      * @param {Object} city 城市对象
      */
     changeCity (city) {
-      this.$store.commit('chgCityName', {
+      // this.$store.commit('chgCityName', {
+      //   name: city.name
+      // })
+
+      this.chgCityName({
         name: city.name
       })
       // this.$router.push('/film/nowPlaying')
@@ -125,6 +137,9 @@ export default {
   },
 
   created () {
+    // this.getCityData();
+    // 调用 仓库中的 action
+    // this.$store.dispatch('getCityData')
     this.getCityData()
   }
 }

@@ -1,6 +1,7 @@
 // 仓库文件
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios';
 
 Vue.use(Vuex);
 
@@ -79,6 +80,24 @@ let store = new Vuex.Store({
     // 修改 cityData
     chgCityData (state, payload) {
       state.cityData = payload
+    }
+  },
+
+  actions: {
+    // 获取城市列表数据
+    getCityData ({ commit, state, getters }) {
+      axios.get('./json/city.json').then((response) => {
+        let res = response.data;
+        console.log(res);
+        if (res.status === 0) {
+          // this.cityData = res.data.cities;
+          // this.$store.commit('chgCityData', res.data.cities)
+          commit('chgCityData', res.data.cities)
+          // console.log(res.data.cities)
+        } else {
+          alert(res.msg)
+        }
+      })
     }
   }
 })
